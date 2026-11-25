@@ -1,0 +1,281 @@
+<resources>
+    <string name="app_name">NFC 卡面</string>
+    <string name="xposed_description">自定义 ColorOS 钱包的 NFC 卡面</string>
+
+    <string name="common_cancel">取消</string>
+    <string name="common_confirm">确定</string>
+    <string name="common_delete">删除</string>
+
+    <!-- Tabs -->
+    <string name="tab_home">主页</string>
+    <string name="tab_cards">卡面</string>
+    <string name="tab_gallery">图库</string>
+    <string name="tab_settings">设置</string>
+
+    <string-array name="refresh_texts">
+        <item>下拉刷新</item>
+        <item>松开刷新</item>
+        <item>正在刷新…</item>
+        <item>刷新成功</item>
+    </string-array>
+
+    <!-- Home -->
+    <string name="home_state_working">工作中</string>
+    <string name="home_state_paused">已暂停</string>
+    <string name="home_state_inactive">未激活</string>
+    <string name="home_state_working_summary">卡面替换已在钱包中生效</string>
+    <string name="home_state_paused_summary">卡面替换已关闭，钱包显示原卡面</string>
+    <string name="home_state_no_lsposed">请在 LSPosed 中启用本模块，点击打开 LSPosed</string>
+    <string name="home_state_no_scope">作用域里没有钱包，点击请求添加</string>
+    <string name="home_state_not_loaded">模块还没在钱包中加载，点击重启钱包（需要 root）</string>
+    <string name="home_overview">概况</string>
+    <string name="home_actions">操作</string>
+    <string name="home_overview_cards">卡片</string>
+    <string name="home_overview_replaced">已替换</string>
+    <string name="home_overview_images">图库</string>
+    <string name="home_status">模块状态</string>
+    <string name="status_lsposed">LSPosed</string>
+    <string name="status_lsposed_off">未连接：请在 LSPosed 中启用本模块</string>
+    <string name="status_scope">作用域</string>
+    <string name="status_scope_ok">已包含钱包</string>
+    <string name="status_scope_missing">未包含钱包，点击请求添加</string>
+    <string name="status_scope_unknown">未知（LSPosed 未连接）</string>
+    <string name="status_wallet">钱包</string>
+    <string name="status_wallet_missing">未安装 com.finshell.wallet</string>
+    <string name="status_targets">钱包进程</string>
+    <string name="status_targets_none">钱包未运行</string>
+    <string name="status_targets_ok">%1$d 个进程，均为当前版本</string>
+    <string name="status_targets_stale">%1$d 个进程中 %2$d 个运行旧版本，点击热重载</string>
+    <string name="status_targets_reloading">正在热重载…</string>
+    <string name="toast_hot_reload_done">已热重载 %1$d 个进程，无需重启钱包</string>
+    <string name="toast_hot_reload_failed">热重载失败（%1$s），请重启钱包</string>
+    <string name="toast_hot_reload_unavailable">当前框架不支持热重载，请重启钱包</string>
+    <string name="status_hook">钱包内生效</string>
+    <string name="status_hook_never">尚未检测到：勾选作用域后重启钱包</string>
+    <string name="status_hook_value">%1$s · %2$d 个 hook · %3$s</string>
+    <string name="home_enable">启用卡面替换</string>
+    <string name="home_enable_summary">关闭后钱包显示原卡面，已保存的替换不会丢失</string>
+    <string name="home_open_wallet">打开钱包</string>
+    <string name="home_restart_wallet">重启钱包</string>
+    <string name="home_restart_wallet_summary">强制停止钱包让新卡面立即生效（需要 root）</string>
+    <string name="home_cards">钱包卡片</string>
+    <string name="home_cards_empty_title">还没有发现卡片</string>
+    <string name="home_cards_empty_summary">打开钱包，进入卡包和卡片详情页，卡片会自动出现在这里；然后在这里下拉刷新</string>
+    <string name="home_clear">清空未替换的记录</string>
+    <string name="home_clear_summary">只删除列表记录，钱包再次显示这些卡时会重新出现</string>
+    <string name="home_clear_title">清空未替换的卡片记录？</string>
+    <string name="home_clear_text">已替换的卡片、图库图片和隐藏名单都会保留。</string>
+    <string name="home_clear_confirm">清空</string>
+    <string name="card_untitled">未命名卡片</string>
+    <string name="card_original">原卡面</string>
+    <string name="card_replaced_image">已替换 · 本地图片</string>
+    <string name="card_replaced_url">已替换 · 网络图片</string>
+    <string name="card_not_replaced">未替换 · 长按查看更多操作</string>
+    <string name="scope_dialog_title">请添加钱包到作用域</string>
+    <string name="scope_dialog_text">模块作用域里没有钱包（com.finshell.wallet），卡面不会被替换。点击「请求添加」后在 LSPosed 的通知中同意即可。</string>
+    <string name="scope_dialog_confirm">请求添加</string>
+    <string name="toast_wallet_missing">没有找到钱包</string>
+    <string name="toast_lsposed_missing">无法直接打开 LSPosed 管理器，请从通知栏或拨号盘进入</string>
+    <string name="toast_restarted">已重启钱包</string>
+    <string name="toast_no_root">没有 root 权限，请手动划掉钱包后重新打开</string>
+    <string name="toast_scope_requested">已向 LSPosed 请求，请在弹出的通知中确认</string>
+    <string name="toast_hidden">已隐藏，可在 设置 → 已隐藏的卡片 中恢复</string>
+
+    <!-- Card edit -->
+    <string name="edit_title">编辑卡面</string>
+    <string name="edit_preview">预览</string>
+    <string name="edit_current">当前卡面</string>
+    <string name="edit_source">替换为</string>
+    <string name="edit_pick_photo">从相册选择</string>
+    <string name="edit_pick_photo_summary">裁剪为钱包卡面比例（1.62 : 1），可叠加卡面标志</string>
+    <string name="edit_pick_gallery">从我的图库选择</string>
+    <string name="edit_pick_online">从在线卡面库选择</string>
+    <string name="edit_pick_online_summary">交通卡、IP 联动、银行卡面，下载后保存到图库</string>
+    <string name="edit_use_url">使用网络图片</string>
+    <string name="edit_use_url_summary">填写图片地址，由钱包自行下载</string>
+    <string name="edit_restore">恢复原卡面</string>
+    <string name="edit_manage">管理</string>
+    <string name="edit_rename">卡片名称</string>
+    <string name="edit_copy_url">复制卡面地址</string>
+    <string name="edit_hide">从列表隐藏</string>
+    <string name="edit_unhide">在列表中显示</string>
+    <string name="edit_forget">删除此卡片记录</string>
+    <string name="edit_forget_summary">同时删除它的替换和名称；钱包再次显示该卡时会重新出现。</string>
+    <string name="edit_url_dialog_title">网络图片地址</string>
+    <string name="edit_url_dialog_hint">https://</string>
+    <string name="edit_url_invalid">请输入 http(s) 开头的地址</string>
+    <string name="toast_copied">已复制</string>
+    <string name="toast_applied">已替换，重启钱包后生效</string>
+    <string name="toast_restored">已恢复原卡面</string>
+
+    <!-- Crop -->
+    <string name="crop_title">裁剪卡面</string>
+    <string name="crop_hint">双指缩放、拖动来调整，框内即为钱包显示的区域</string>
+    <string name="crop_logo">卡面标志</string>
+    <string name="crop_logo_none">无</string>
+    <string name="crop_round">圆角</string>
+    <string name="crop_round_summary">给新保存的卡面切圆角（钱包本身也会裁圆角，一般不需要）</string>
+    <string name="crop_reset">重置</string>
+    <string name="crop_save">保存并应用</string>
+    <string name="crop_save_only">保存到图库</string>
+    <string name="crop_loading">正在读取图片…</string>
+    <string name="crop_failed">无法读取这张图片</string>
+    <string name="toast_saved">已保存到图库</string>
+
+    <!-- Logos -->
+    <string name="logos_title">卡面标志</string>
+    <string name="logos_import">导入标志</string>
+    <string name="logos_import_summary">选择透明背景的 PNG，会拉伸铺满整张卡面</string>
+    <string name="logos_list">全部标志</string>
+    <string name="logos_builtin">内置（来自 DIY NFC 卡面）</string>
+    <string name="logos_user">自己导入的，点击删除</string>
+    <string name="logos_imported">已导入</string>
+
+    <!-- Online library -->
+    <string name="online_search_hint">搜索卡名、城市、IP、银行</string>
+    <string name="online_search_tip">在当前分类中搜索</string>
+    <string name="online_transit">交通卡</string>
+    <string name="online_ip">IP 联动</string>
+    <string name="online_bank">银行卡</string>
+    <string name="online_favorites">收藏</string>
+    <string name="online_group_all">全部</string>
+    <string name="online_loading">正在加载在线卡面…</string>
+    <string name="online_error">加载失败（%1$s），下拉重试</string>
+    <string name="online_count">%1$d 张卡面</string>
+    <string name="online_favorites_empty">还没有收藏，点开卡面即可收藏</string>
+    <string name="online_apply_this">应用到「%1$s」</string>
+    <string name="online_apply_summary">下载原图，居中裁剪为钱包比例</string>
+    <string name="online_crop">裁剪后使用</string>
+    <string name="online_crop_summary">自己调整位置，可叠加卡面标志</string>
+    <string name="online_save">保存到图库</string>
+    <string name="online_downloading">正在下载…</string>
+    <string name="online_favorite">收藏</string>
+    <string name="online_unfavorite">取消收藏</string>
+    <string name="online_copy_url">复制原图地址</string>
+    <string name="online_download_failed">下载失败，请检查网络后重试</string>
+
+    <!-- Gallery -->
+    <string name="gallery_title">图库</string>
+    <string name="gallery_section_mine">我的图片 · %1$d</string>
+    <string name="gallery_section_online">卡面库</string>
+    <string name="gallery_browse_online">浏览在线卡面库</string>
+    <string name="gallery_pick_title">选择图片</string>
+    <string name="gallery_add">从相册添加</string>
+    <string name="gallery_count">%1$d 张图片</string>
+    <string name="gallery_tap_hint">" · 点击应用到卡片，长按删除"</string>
+    <string name="gallery_empty">图库是空的</string>
+    <string name="gallery_empty_summary">从相册添加的卡面都保存在这里，可以重复使用</string>
+    <string name="gallery_used">%1$d 张卡片在使用</string>
+    <string name="gallery_unused">未使用</string>
+    <string name="gallery_apply_title">应用到卡片</string>
+    <string name="gallery_apply_current">正在使用这张图片</string>
+    <string name="gallery_delete">删除这张图片</string>
+    <string name="gallery_delete_title">删除这张图片？</string>
+    <string name="gallery_delete_summary">图片将从图库中删除。</string>
+    <string name="gallery_delete_used">有 %1$d 张卡片在使用它，删除后这些卡片会恢复原卡面。</string>
+
+    <!-- Settings -->
+    <string name="settings_title">设置</string>
+    <string name="settings_hook">替换</string>
+    <string name="settings_test_mode">测试模式</string>
+    <string name="settings_test_mode_summary">把所有卡面替换为测试图，用来确认模块已生效</string>
+    <string name="settings_catalog_proxy">卡面库省流量</string>
+    <string name="settings_catalog_proxy_summary">缩略图经 wsrv.nl 图片代理压缩后加载；关闭则直接加载原图。应用到卡片时总是下载原图</string>
+    <string name="settings_clear_cache">清除钱包图片缓存</string>
+    <string name="settings_clear_cache_summary">原卡面显示错误或不更新时使用（需要 root）</string>
+    <string name="settings_clear_cache_title">清除钱包图片缓存？</string>
+    <string name="settings_clear_cache_text">会删除钱包的图片缓存并停止钱包，下次打开时重新下载卡面。替换图不受影响。</string>
+    <string name="toast_cache_cleared">已清除，重新打开钱包即可</string>
+    <string name="toast_no_root_cache">没有 root 权限：可在系统设置 → 应用 → 钱包 → 存储中清除缓存</string>
+    <string name="settings_appearance">外观</string>
+    <string name="settings_theme">深色模式</string>
+    <string name="settings_theme_system">跟随系统</string>
+    <string name="settings_theme_light">浅色</string>
+    <string name="settings_theme_dark">深色</string>
+    <string name="settings_blur">材质模糊</string>
+    <string name="settings_hide_icon">隐藏桌面图标</string>
+    <string name="settings_hide_icon_summary">隐藏后可在 LSPosed 模块列表中打开</string>
+    <string name="settings_hide_icon_title">确定隐藏图标吗？</string>
+    <string name="settings_hide_icon_text">桌面上本应用的图标将会消失。之后只能在 LSPosed 中长按本模块，选择「模块设置」打开；随时可以关闭此选项恢复图标。</string>
+    <string name="settings_data">数据</string>
+    <string name="settings_hidden">已隐藏的卡片</string>
+    <string name="settings_hidden_summary">不显示在卡面列表的卡片，替换仍然生效</string>
+    <string name="settings_reset">恢复全部原卡面</string>
+    <string name="settings_reset_title">恢复全部原卡面？</string>
+    <string name="settings_reset_summary">删除所有卡片的替换，图库中的图片会保留</string>
+    <string name="settings_dev">开发者选项</string>
+    <string name="settings_record_all">记录所有图片</string>
+    <string name="settings_record_all_summary">把钱包加载的所有网络图片都加入列表，用于找未适配的卡面；会混入横幅和图标</string>
+    <string name="settings_glide">全局 Glide 兜底</string>
+    <string name="settings_glide_summary">在所有 Glide 加载里替换，卡面出现在未适配的页面时打开；需重启钱包</string>
+    <string name="settings_debug">详细日志</string>
+    <string name="settings_debug_summary">在 LSPosed 日志中输出每一次替换</string>
+    <string name="settings_about">帮助与关于</string>
+    <string name="settings_version">版本</string>
+    <string name="settings_target">适配钱包</string>
+    <string name="settings_target_value">com.finshell.wallet 5.52</string>
+    <string name="hidden_title">已隐藏的卡片</string>
+    <string name="hidden_empty">没有隐藏的卡片</string>
+    <string name="hidden_restore">点击恢复显示</string>
+    <string name="toast_done">完成</string>
+
+    <!-- Custom hook -->
+    <string name="custom_hook_title">自定义 hook 点</string>
+    <string name="custom_hook_unset">未设置</string>
+    <string name="custom_hook_warning">仅供测试，不懂勿动</string>
+    <string name="custom_hook_tip">钱包更新后内置的 hook 点失效时，可在这里指定一个加载卡面地址的方法。与内置 hook 点同时生效，修改后重启钱包。</string>
+    <string name="custom_hook_point">方法</string>
+    <string name="custom_hook_class">类名</string>
+    <string name="custom_hook_method">方法名</string>
+    <string name="custom_hook_arg">参数类型</string>
+    <string name="custom_hook_no_arg">无参数</string>
+    <string name="custom_hook_mode">替换方式</string>
+    <string name="custom_hook_from_arg">从参数读取地址</string>
+    <string name="custom_hook_from_arg_summary">关闭时改为从返回值读取</string>
+    <string name="custom_hook_to_arg">把替换写回参数</string>
+    <string name="custom_hook_to_arg_summary">关闭时直接返回替换地址，不调用原方法</string>
+    <string name="custom_hook_clear">清除自定义 hook 点</string>
+
+    <!-- Help / About -->
+    <string name="help_title">使用说明</string>
+    <string name="help_usage_title">使用说明</string>
+    <string name="help_usage_text">1. 在 LSPosed 启用本模块，作用域勾选「钱包」
+2. 重启钱包，进入卡包和卡片详情页
+3. 回到这里下拉刷新，点卡片选择新卡面
+4. 重启钱包生效
+
+不需要 root；只有「重启钱包」「清除钱包图片缓存」用到 root。</string>
+    <string-array name="help_steps">
+        <item>在 LSPosed 启用本模块|作用域勾选「钱包」(com.finshell.wallet)，首页也可以一键请求</item>
+        <item>重启钱包，浏览卡片|进入卡包、卡片详情页，钱包显示过的卡面会被记录</item>
+        <item>回到本应用下拉刷新|卡片出现在「卡面」页，带有钱包里的卡名；「主页」显示模块是否生效</item>
+        <item>点卡片选择新卡面|从相册裁剪（可叠加卡面标志）、从「图库」的我的图片或在线卡面库选、或填网络图片地址</item>
+        <item>重启钱包生效|首页「重启钱包」需要 root；没有 root 就手动划掉钱包</item>
+    </string-array>
+    <string name="help_faq_title">常见问题</string>
+    <string-array name="faq_questions">
+        <item>卡面列表是空的</item>
+        <item>替换了但钱包里没变化</item>
+        <item>改了替换图，钱包还显示旧图</item>
+        <item>某张卡没有出现在列表里</item>
+        <item>钱包更新后不生效了</item>
+        <item>更新模块后要重启钱包吗</item>
+        <item>需要 root 吗</item>
+    </string-array>
+    <string-array name="faq_answers">
+        <item>确认「主页」的模块状态是「工作中」，「LSPosed」「作用域」正常，「钱包内生效」有时间显示；强行停止钱包后重新打开，进入卡包加载完卡面，再回来下拉刷新。</item>
+        <item>先打开 设置 → 测试模式：如果钱包卡面变成测试图，说明模块正常，重启钱包即可；如果没变，检查作用域并重启钱包。</item>
+        <item>本应用的替换图地址自带版本号，一般不会被缓存；仍显示旧图时重启钱包，或在设置中清除钱包图片缓存。</item>
+        <item>该卡可能用了未适配的页面。在 关于 中连点版本号 7 次打开开发者选项，开启「记录所有图片」或「全局 Glide 兜底」。</item>
+        <item>先看 LSPosed 日志里 NfcCardSkin 的输出；内置 hook 点找不到时，可在开发者选项里设置自定义 hook 点。</item>
+        <item>LSPosed 支持 API 102 时不需要：模块更新后会自动热重载正在运行的钱包进程；没有自动生效时在「主页 → 钱包进程」点击热重载。API 101 的框架仍需重启钱包。</item>
+        <item>不需要。替换图通过本应用的 ContentProvider 提供给钱包；只有重启钱包、清除钱包缓存用到 root。</item>
+    </string-array>
+    <string name="about_title">关于</string>
+    <string name="about_dev_on">开发者选项已开启</string>
+    <string name="about_dev_enabled">已开启开发者选项</string>
+    <string name="about_dev_disabled">已关闭开发者选项</string>
+    <string name="about_open_lsposed">打开 LSPosed</string>
+    <string name="about_open_lsposed_summary">查看日志：搜索 NfcCardSkin</string>
+    <string name="about_refs">参考与开源</string>
+</resources>

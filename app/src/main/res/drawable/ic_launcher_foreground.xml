@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- NFC card skin: a white card (chip + NFC waves) over a tilted translucent card, with a sparkle. 108dp adaptive foreground; artwork kept inside the 66dp safe zone. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <group
+        android:pivotX="52"
+        android:pivotY="50.3"
+        android:rotation="-13">
+        <path
+            android:fillAlpha="0.38"
+            android:fillColor="#FFFFFF"
+            android:pathData="M30,33H74A6,6 0 0,1 80,39V61.6A6,6 0 0,1 74,67.6H30A6,6 0 0,1 24,61.6V39A6,6 0 0,1 30,33Z" />
+    </group>
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M33,45H77A6,6 0 0,1 83,51V73.6A6,6 0 0,1 77,79.6H33A6,6 0 0,1 27,73.6V51A6,6 0 0,1 33,45Z" />
+    <path
+        android:fillColor="#FFC24A"
+        android:pathData="M36,54.5H42.5A2,2 0 0,1 44.5,56.5V60.5A2,2 0 0,1 42.5,62.5H36A2,2 0 0,1 34,60.5V56.5A2,2 0 0,1 36,54.5Z" />
+    <path
+        android:fillColor="#D5DEEE"
+        android:pathData="M35.4,70.5H46.6A1.4,1.4 0 0,1 48,71.9V71.9A1.4,1.4 0 0,1 46.6,73.3H35.4A1.4,1.4 0 0,1 34,71.9V71.9A1.4,1.4 0 0,1 35.4,70.5Z" />
+    <path
+        android:pathData="M66.89,58.85A4.5,4.5 0 0,1 66.89,65.75"
+        android:strokeWidth="2.6"
+        android:strokeColor="#2F6BFF"
+        android:strokeLineCap="round" />
+    <path
+        android:pathData="M69.27,56.02A8.2,8.2 0 0,1 69.27,68.58"
+        android:strokeWidth="2.6"
+        android:strokeColor="#2F6BFF"
+        android:strokeLineCap="round" />
+    <path
+        android:pathData="M71.65,53.18A11.9,11.9 0 0,1 71.65,71.42"
+        android:strokeWidth="2.6"
+        android:strokeColor="#2F6BFF"
+        android:strokeLineCap="round" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M80.5,23Q81.6,28.4 87,29.5Q81.6,30.6 80.5,36Q79.4,30.6 74,29.5Q79.4,28.4 80.5,23Z" />
+    <path
+        android:fillAlpha="0.8"
+        android:fillColor="#FFFFFF"
+        android:pathData="M70.5,19.5Q71,22 73.5,22.5Q71,23 70.5,25.5Q70,23 67.5,22.5Q70,22 70.5,19.5Z" />
+</vector>

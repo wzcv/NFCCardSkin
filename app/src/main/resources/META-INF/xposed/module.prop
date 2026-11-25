@@ -1,0 +1,8 @@
+# libxposed API 102. Works on API 101 frameworks too: 102-only calls (hook ids, hot reload,
+# running targets) are guarded by the runtime API version. Raise minApiVersion to 102 to drop 101.
+minApiVersion=101
+targetApiVersion=102
+staticScope=true
+exceptionMode=protective
+# Hot reload the running wallet processes when the module app is updated (API 102+).
+autoHotReload=true

@@ -1,0 +1,12 @@
+# libxposed API 102 rules (from the libxposed/api README).
+-dontwarn io.github.libxposed.annotation.**
+-adaptresourcefilecontents META-INF/xposed/java_init.list
+-keep,allowoptimization,allowobfuscation public class * extends io.github.libxposed.api.XposedModule {
+    public <init>();
+}
+
+# Xposed entry and everything the hook reaches by reflection; the provider the wallet calls.
+-keep class com.wu.nfccardskin.xposed.** { *; }
+-keep class com.wu.nfccardskin.core.SkinProvider { *; }
+-keep class io.github.libxposed.** { *; }
+-dontwarn io.github.libxposed.**
